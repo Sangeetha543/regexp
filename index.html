@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+	 content="width=device-width, Initial-scale=1.0">
+	 <title>Document</title>
+	 <link rel="stylesheet" href="css/bootstrap.min.css" />
+	</head>
+<body class="container"></body>
+<div class="row">
+	<div class ="col=1g-6">
+		<span id="message"></span>
+		<div class="card mt-3">
+			<div class="card-header bg-primary text-white" >sample form</div>
+		<div class="card-body">
+			<form>
+				<input type="text" class="form-control" onkeyup="validateEmail()" id="mobile" placeholder="mobile" />
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+<script>
+	function validateEmail() {
+		var mobile1=document.querySelector("#mobile").value;
+		var mobile=document.querySelector ("#message");
+		if(mobile1.match("^[0-9]{1}[6-9]{9}$")!=null){
+			message.classList.remove("alert-warning");
+			message.classList.add("alert","alert-info","mb-3");
+			message.textContenet="valid mobile number";
+		}else{
+			message.classList.add("alert","alert-info","mb-3");
+			message.classList.remove("alert","alert-info");
+			message.textContenet="Invalid mobile number";
+		}
+
+		}
+		// body...
+</script>
+</html>
